@@ -1,0 +1,19 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: Qwen/Qwen2.5-1.5B-Instruct
+adapter_name_or_path: saves/gemma-2b/lora/qwen_reward_0001sft_bt_ref_fst/checkpoint-2976
+template: qwen
+finetuning_type: lora
+
+### export
+export_dir: models/taorm_math
+export_size: 2
+export_device: cpu
+export_legacy_format: false
+
+### dataset
+new_special_tokens: "[STEP],[REQ],[SPACE]"
+
+
+

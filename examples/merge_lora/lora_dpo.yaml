@@ -1,0 +1,19 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: google/gemma-2b-it
+adapter_name_or_path: saves/gemma-2b/lora/dpo_taorm400k_reward_bench/checkpoint-694
+template: gemma
+finetuning_type: lora
+
+### export
+export_dir: models/dpo_taorm400k
+export_size: 2
+export_device: cpu
+export_legacy_format: false
+
+### dataset
+new_special_tokens: "[STEP],[REQ],[SPACE]"
+
+
+

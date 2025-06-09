@@ -1,0 +1,55 @@
+### model
+model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct #./gemma-2b-it
+ref_model: meta-llama/Meta-Llama-3-8B-Instruct
+ref_model_adapters: saves/gemma-2b/lora/skywork_train_sft_fst/checkpoint-4656
+
+
+### method
+stage: taorm
+do_train: true
+finetuning_type: lora
+lora_target: all
+lora_rank: 32
+lora_alpha: 64
+deepspeed: examples/deepspeed/ds_z3_offload_config.json
+
+### dataset
+dataset: skywork_train,ulfeedback_train40K
+template: llama3
+cutoff_len: 2048
+max_samples: 1000000
+overwrite_cache: true
+preprocessing_num_workers: 16
+new_special_tokens: "[STEP],[REQ],[SPACE]"
+
+### output
+output_dir: saves/gemma-2b/lora/skywork_train_reward_0001sft_01reg_mean_bt_ref_fst #_002_10reg_ra2
+logging_steps: 1000
+save_steps: 1000
+plot_loss: true
+overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 3
+gradient_accumulation_steps: 4
+learning_rate: 1.0e-5
+num_train_epochs: 1.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+bf16: true
+ddp_timeout: 180000000
+weight_ratio: 0.001
+reg_ratio: 0.1
+radis: 2.0
+temp_ratio: 1.0
+use_pref: true
+use_log: true
+use_align: true
+
+### eval
+eval_dataset: skywork_eval
+val_size: 0.0
+per_device_eval_batch_size: 2
+eval_strategy: steps
+eval_steps: 1000
+

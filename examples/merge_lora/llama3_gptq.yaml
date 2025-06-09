@@ -1,0 +1,19 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
+adapter_name_or_path: saves/gemma-2b/lora/skywork_train_reward_0001sft_01reg_mean_bt_ref_fst/checkpoint-4656
+template: llama3
+finetuning_type: lora
+
+### export
+export_dir: models/skywork_fst
+export_size: 2
+export_device: cpu
+export_legacy_format: false
+
+### dataset
+new_special_tokens: "[STEP],[REQ],[SPACE]"
+
+
+
