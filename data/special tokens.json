@@ -1,0 +1,13 @@
+{
+    "input":{
+        "start step": "[STEP]",
+        "end step": "",
+        "request": "[REQ]",
+        "space holder": "[SPACE]"
+    },
+    "output":{
+        "postive": "+",
+        "negtive": "-",
+        "natural": "0"
+    }
+}
