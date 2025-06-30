@@ -110,11 +110,11 @@ CUDA_VISIBLE_DEVICES=0 python length_analysis.py
 ```
 
 ## Citation
-@article{zhou2025intra, \\
-  title={Intra-Trajectory Consistency for Reward Modeling}, \\
-  author={Zhou, Chaoyang and Liu, Shunyu and Wang, Zengmao and Wang, Di and Tu, Rong-Cheng and Du, Bo and Tao, Dacheng}, \\
-  journal={arXiv preprint arXiv:2506.09096}, \\
-  year={2025} \\
+@article{zhou2025intra,\
+  title={Intra-Trajectory Consistency for Reward Modeling},\
+  author={Zhou, Chaoyang and Liu, Shunyu and Wang, Zengmao and Wang, Di and Tu, Rong-Cheng and Du, Bo and Tao, Dacheng},\
+  journal={arXiv preprint arXiv:2506.09096},\
+  year={2025}\
 }
 
 ## Acknowledgement
