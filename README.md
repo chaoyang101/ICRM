@@ -51,7 +51,7 @@ CUDA_VISIBLE_DEVICES=0 FORCE_TORCHRUN=1 llamafactory-cli export examples/merge_l
 
 ### Evaluating reward models
 
-To evaluate on RewardBench, first follow the [original guidance](https://github.com/allenai/reward-bench) to prepare the environment. Then you can use the code in the reward_bench folder to replace the original reward_bench code. Put the model into "./ATORM/lora_reward_sft_reg" and evaluate it with:
+To evaluate on RewardBench, first follow the [original guidance of RewardBench](https://github.com/allenai/reward-bench) to prepare the environment. Then you can use the code in the reward_bench folder to replace the original reward_bench code. Put the model into "./ATORM/lora_reward_sft_reg" and evaluate it with:
 
 ```
 CUDA_VISIBLE_DEVICES=0 python scripts/run_rm.py --model=./ATORM/lora_reward_sft_reg --batch_size=8 --tokenizer=./ATORM/lora_reward_sft_reg --do_not_save
@@ -114,5 +114,6 @@ Length analysis (note that you need to install the package "seaborn" first):
 ```
 CUDA_VISIBLE_DEVICES=0 python length_analysis.py
 ```
-
+## Thanks
+Our code is based on [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) and [RewardBench](https://github.com/allenai/reward-bench).
 ## Citation
