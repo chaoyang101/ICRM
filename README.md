@@ -108,6 +108,12 @@ Length analysis (note that you need to install the package "seaborn" first):
 ```
 CUDA_VISIBLE_DEVICES=0 python length_analysis.py
 ```
-## Thanks
+## Acknowledgement
 Our code is based on [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) and [RewardBench](https://github.com/allenai/reward-bench).
 ## Citation
+@article{zhou2025intra,
+  title={Intra-Trajectory Consistency for Reward Modeling},
+  author={Zhou, Chaoyang and Liu, Shunyu and Wang, Zengmao and Wang, Di and Tu, Rong-Cheng and Du, Bo and Tao, Dacheng},
+  journal={arXiv preprint arXiv:2506.09096},
+  year={2025}
+}
