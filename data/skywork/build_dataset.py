@@ -45,10 +45,11 @@ def split_train_test(prompts, chosens, rejecteds, test_step=10):
         (test_prompts, test_chosens, test_rejecteds)
     )
 
+
 if __name__ == "__main__":
     train_path_name = "./data/train/skywork/skywork_train.json"
     eval_path_name = "./data/test/skywork/skywork_eval.json"
-    
+
     if not os.path.exists("./data/train/skywork"):
         os.makedirs("./data/train/skywork")
     if not os.path.exists("./data/test/skywork"):
@@ -75,7 +76,4 @@ if __name__ == "__main__":
     with open(eval_path_name, 'w') as json_file:
         json.dump(eval_ds, json_file, indent=2)
 
-    stats_prompts = calculate_length_stats(prompts)
-    stats_chosens = calculate_length_stats(chosens)
-    stats_rejecteds = calculate_length_stats(rejecteds)
     
