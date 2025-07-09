@@ -1,6 +1,6 @@
 from datasets import load_dataset
 import json
-
+import os
 
 def change_to_dpo_format(content_list, chosen_list, reject_list):
     datas = []
