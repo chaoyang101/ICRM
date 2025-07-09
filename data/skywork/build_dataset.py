@@ -48,7 +48,12 @@ def split_train_test(prompts, chosens, rejecteds, test_step=10):
 if __name__ == "__main__":
     train_path_name = "./data/train/skywork/skywork_train.json"
     eval_path_name = "./data/test/skywork/skywork_eval.json"
-
+    
+    if not os.path.exists("./data/train/skywork"):
+        os.makedirs("./data/train/skywork")
+    if not os.path.exists("./data/test/skywork"):
+        os.makedirs("./data/test/skywork")
+        
     ds = load_dataset("Skywork/Skywork-Reward-Preference-80K-v0.2")
     prompts = []
     chosens = []
